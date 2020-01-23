@@ -1,0 +1,28 @@
+<!--
+<div class="dxm-card" style="border: 1px solid blue">
+     <a class="card__link" href="https://www.google.com" target="_blank">
+        <div class="card__wrapper" style="background-color: white">
+            <div class="card__content" style="color: blue">
+                <div class="card__title">Solution</div>
+                <div class="card__description">Digital solutions, purpose-built for you</div>                     
+            </div>
+        </div>
+    </a>
+</div>
+
+-->
+<div data-sly-use.card="com.adobe.aem.guides.wknd.core.components.Card"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${!card.isEmpty}"
+     class="card">
+     <a class="card__link" href="${card.linkPath @ extension = 'html'}">
+        <div class="card__wrapper"
+              style="background-image: url(${card.backgroundImage @ context='uri'})">
+                <div class="card__content">
+                     <h2 class="card__title" data-sly-test.title="${card.title}">${title}</h2>
+                     <h3 class="card__description" data-sly-test.description="${card.description}">${description}</h3>
+                </div>
+            </div>
+    </a>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=card.isEmpty}"></sly>

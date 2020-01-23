@@ -1,0 +1,64 @@
+/* WKND Card - position.less*/
+ 
+.card--left {
+    .card {
+         
+        .card__content {
+            text-align: left;
+            width: 60%;
+            left: 0;
+        }
+         
+        @media (max-width: (@screen-sm-min + 1)) {
+            .card__content {
+                width: 100%;
+                text-align:center;
+            }
+        }
+    }
+}
+ 
+.card--center { 
+    .card {
+         
+        .card__content {
+            text-align: center;
+        }
+    }
+}
+ 
+.card--right {
+    .card {
+         
+        .card__content {
+            text-align: right;
+            width:60%;
+            right:0;
+        }
+         
+        @media (max-width: (@screen-sm-min + 1)) {
+            .card__content {
+                width: 100%;
+                text-align:center;
+            }
+        }
+    }
+}
+ 
+.card--top {
+    .card { 
+        .card__content {
+            top: 0;
+            bottom:unset;
+        }
+    }
+}
+ 
+.card--bottom {
+    .card { 
+        .card__content {
+            bottom: 0;
+            top:unset;
+        }
+    }
+}
